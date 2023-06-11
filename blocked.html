@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Blocked</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .graphic-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    .graphic {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      background-color: #ccc;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .graphic:before,
+    .graphic:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s ease-in-out;
+    }
+
+    .graphic:before {
+      width: 70%;
+      height: 70%;
+      background-color: #ff4d4d;
+    }
+
+    .graphic:after {
+      width: 40%;
+      height: 40%;
+      background-color: #fff;
+    }
+
+    .graphic-container:hover .graphic:before,
+    .graphic-container:hover .graphic:after {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    p {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    .glitch {
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ff00;
+      position: relative;
+      display: inline-block;
+      animation: glitch-animation 2s infinite;
+    }
+
+    @keyframes glitch-animation {
+      0% {
+        transform: skew(0);
+        opacity: 1;
+      }
+      20% {
+        transform: skew(0.5deg);
+        opacity: 0.75;
+      }
+      40% {
+        transform: skew(-1deg);
+        opacity: 1;
+      }
+      60% {
+        transform: skew(0.5deg);
+        opacity: 0.75;
+      }
+      80% {
+        transform: skew(-0.5deg);
+        opacity: 1;
+      }
+      100% {
+        transform: skew(0);
+        opacity: 0.75;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1><span class="glitch">Page Blocked</span></h1>
+  <div class="graphic-container">
+    <div class="graphic"></div>
+  </div>
+  <p>This page is unavailable due To "HTML Based Unblocked Games Blocker" Detecting it as an Unblocked Games Site/Page.</p>
+</body>
+</html>
